@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safeguard Website</title>
+    <title>SafeGuard Token Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Safeguard Website</h1>
-        <form id="registrationForm">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+    <header>
+        <h1>SafeGuard Token Dashboard</h1>
+    </header>
 
-            <button type="button" onclick="registerUser()">Register</button>
+    <section id="tokenInfo">
+        <h2>Token Information</h2>
+        <p id="totalSupply">Total Supply: Loading...</p>
+        <p id="circulatingSupply">Circulating Supply: Loading...</p>
+        <p id="lockedTokens">Locked Tokens: Loading...</p>
+    </section>
+
+    <section id="reportScam">
+        <h2>Report a Scam</h2>
+        <form id="scamReportForm">
+            <label for="scamAddress">Scam Address:</label>
+            <input type="text" id="scamAddress" name="scamAddress" required>
+            <button type="submit">Report Scam</button>
         </form>
+        <p id="reportStatus"></p>
+    </section>
 
-        <div id="loginSection" style="display: none;">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="loginUsername">Username:</label>
-                <input type="text" id="loginUsername" name="loginUsername" required>
+    <footer>
+        &copy; 2023 SafeGuard Token. All rights reserved.
+    </footer>
 
-                <label for="loginPassword">Password:</label>
-                <input type="password" id="loginPassword" name="loginPassword" required>
-
-                <button type="button" onclick="loginUser()">Login</button>
-            </form>
-        </div>
-
-        <div id="dashboard" style="display: none;">
-            <h2>Dashboard</h2>
-            <!-- Add elements for token information and scam reporting -->
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
 </body>
+
 </html>
