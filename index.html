@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safeguard Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Safeguard Website</h1>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+
+        <div id="loginSection" style="display: none;">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+
+                <button type="button" onclick="loginUser()">Login</button>
+            </form>
+        </div>
+
+        <div id="dashboard" style="display: none;">
+            <h2>Dashboard</h2>
+            <!-- Add elements for token information and scam reporting -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
